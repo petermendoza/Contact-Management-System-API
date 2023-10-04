@@ -2,10 +2,11 @@
 // Requiring express 
 const express = require("express");
 const errorHandler = require("./middleware/errorHandler");
+const connectDb = require("./config/dbConnection");
 // Uses the .env file
 const dotenv = require("dotenv").config()
 
-
+connectDb();
 // App for express
 const app = express();
 
