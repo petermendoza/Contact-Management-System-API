@@ -2,6 +2,11 @@ const mongoose = require("mongoose");
 
 const contactSchema = mongoose.Schema({
     // Fill out fields you want in schema
+    user_id:{
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: "User",
+    },
     name: {
         type: String,
         // Required flag true, if it doesn't meet requirement then give message
